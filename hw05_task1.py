@@ -100,7 +100,7 @@ def caching_fibonacci() -> Callable[[int], int]:
             return 0
         if n == 1:  # base case
             return 1
-        if n in cache:
+        if n in cache: # check if n is already in cache
             return cache[n]
         cache[n] = fibonacci(n - 1) + fibonacci(n - 2)
         return cache[n]
@@ -112,7 +112,7 @@ def caching_fibonacci() -> Callable[[int], int]:
 fib = caching_fibonacci()
 
 # Use function to calculate Fibonacci numbers
-print(fib(10))  # Виведе 55
-print(fib(15))  # Виведе 610
-print(fib(1))  # Виведе 1
-print(fib(0))  # Виведе 0
+print(fib(10))  # Output 55
+print(fib(15))  # Output 610
+print(fib(1))  # Output 1
+print(fib(0))  # Output 0
